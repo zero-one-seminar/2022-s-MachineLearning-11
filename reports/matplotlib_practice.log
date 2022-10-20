@@ -1,0 +1,63 @@
+Traceback (most recent call last):
+  File "/Users/komotokenta/Docker/practice-datavisualization/.practice-datavisualization/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Users/komotokenta/Docker/practice-datavisualization/.practice-datavisualization/lib/python3.10/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/komotokenta/Docker/practice-datavisualization/.practice-datavisualization/lib/python3.10/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/komotokenta/Docker/practice-datavisualization/.practice-datavisualization/lib/python3.10/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.2/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 641, in run_until_complete
+    return future.result()
+  File "/Users/komotokenta/Docker/practice-datavisualization/.practice-datavisualization/lib/python3.10/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/Users/komotokenta/Docker/practice-datavisualization/.practice-datavisualization/lib/python3.10/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/komotokenta/Docker/practice-datavisualization/.practice-datavisualization/lib/python3.10/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+### 問題 ###
+# ... に当てはまるコードを入れてね
+
+fig = plt.figure(figsize=(12, 10), dpi=100)
+
+ax1 = ...
+ax2 = ...
+ax3 = ...
+ax4 = ...
+
+# ax1 (左上)
+ax1. ...
+
+# ax2 (右上)
+ax2. ...  # label='total_rooms'
+ax2. ...  # label='total_bedrooms'
+ax2.legend(loc='upper right')
+
+# ax3 (左下)
+ax3. ... # label='temperature'
+ax3. ... # label='precipitation'
+ax3.legend(loc='upper right')
+
+# ax4 (右下)
+ax4. ...
+
+#### タイトル
+fig.suptitle('カリフォルニアの各種統計', fontsize=20)
+
+ax1.set_title('total_rooms and total_bedrooms')
+ax2.set_title('total_rooms and total_bedrooms')
+ax3.set_title('temperature and precippitation')
+ax4.set_title('hythergraph of california')
+
+plt.show()
+------------------
+
+[0;36m  Input [0;32mIn [5][0;36m[0m
+[0;31m    ax1. ...[0m
+[0m         ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
+SyntaxError: invalid syntax (3114002290.py, line 12)
+
